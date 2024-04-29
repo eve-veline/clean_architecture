@@ -40,6 +40,10 @@ dependencies:
   dartz: ^0.10.1
   http: ^1.2.1
   google_fonts: ^6.2.1
+  get_it: ^7.7.0
+  expandable: ^5.0.1
+  carousel_slider: ^4.2.1
+
 
 dev_dependencies:
   flutter_test:

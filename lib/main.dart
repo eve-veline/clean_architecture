@@ -1,7 +1,11 @@
-import 'package:clean_archi/application/pages/homepage.dart';
+import 'package:clean_archi/application/pages/constant/page_name.dart';
+import 'package:clean_archi/application/pages/home/homepage.dart';
+import 'package:clean_archi/injection.dart';
+import 'package:clean_archi/route.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  init();
   runApp(const MyApp());
 }
 
@@ -19,7 +23,8 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       // theme: ThemeData.dark(),
       theme: ThemeData(scaffoldBackgroundColor: Color(0xffc8d9eb)),
-      home: HomePage(),
+      initialRoute: PageName.homePage,
+      onGenerateRoute: OnGenerateRoute().generateRoute,
     );
   }
 }

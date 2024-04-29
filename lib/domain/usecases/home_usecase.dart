@@ -8,7 +8,7 @@ class HomeUseCases {
 
   HomeUseCases({required this.homeRepo});
 
-  Future<Either<Failure, RestoEntity>> getResto() async {
+  Future<Either<Failure, List<RestoEntity>>> getResto() async {
     return homeRepo.getRestoFromDatasource();
   }
 }

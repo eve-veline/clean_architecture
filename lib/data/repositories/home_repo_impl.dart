@@ -11,10 +11,10 @@ class HomeRepoImpl implements HomeRepo {
   HomeRepoImpl({required this.apiService});
 
   @override
-  Future<Either<Failure, RestoEntity>> getRestoFromDatasource() async {
+  Future<Either<Failure, List<RestoEntity>>> getRestoFromDatasource() async {
     try {
       final result = await apiService.restoList();
-      return right(result as RestoEntity);
+      return right(result);
     } on ServerException catch (_) {
       return left(ServerFailure());
     } catch (e) {
